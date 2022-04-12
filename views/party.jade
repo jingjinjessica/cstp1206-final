@@ -1,0 +1,21 @@
+extends layout 
+head
+    block style
+        link(href='/css/party.css', rel='stylesheet')
+block content
+    h1 party
+    .container
+        .images-box
+            img#mypic(src="#{image}", width=300, height=300, alt="#{name}")
+        .button 
+            input#show(type="submit" value="Show")
+        .edit-box
+            form#editPlantForm(action="/editPlant", method="POST")
+               
+
+                input#done(type="submit" value="Regenerate")
+                input#delete(type="submit" value="Delete")
+    script.
+        document.getElementById("delete").addEventListener('click', deletePlant);
+
+        

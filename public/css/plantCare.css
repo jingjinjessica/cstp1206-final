@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Gudea&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /*search*/
+.search-bar {
+    margin: 0 auto;
+    margin-top: 50px;
+    display: inline-block;
+    height: 50px;
+    width: 927px;
+    border-radius: 10px;
+    background: rgba(142, 142, 147, 0.12);
+    font-family: 'Gudea';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 22px;
+    align-items: center;
+    display: flex;
+    letter-spacing: -0.0241176em;
+    color: #8E8E93;
+}
+.search-bar input {
+    border: none;
+    background: none;
+}
+
+.title {
+    margin-top: 120px;
+    margin-left: 50px;
+}
+
+.title h1 {
+    padding-top: 20px;
+    font-size: 50px;
+    font-family: 'Gudea';
+    font-style: bold;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 49px;
+    letter-spacing: 0.25em;
+    color: #000000;
+}
+
+.table1 {
+    margin-top: -60px;
+}
+
+.table1 th {
+   text-align: left;
+}
+
+.tool-background-1 {
+    background-color: #E7ECF4;
+    margin-top: 300px;
+    margin-left: 50px;
+    width: 377px;
+    height: 345px;
+
+}
+.tool-1 {
+    margin-top: -530px;
+    margin-left: 100px;
+}
+.tool-name-1 {
+    margin-top: -186px;
+    margin-left: 320px;
+}
+
+.tool-name-1 h1{
+    padding-top: 20px;
+    font-size: 50px;
+    font-family: 'Gudea';
+    font-style: bold;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 49px;
+    letter-spacing: 0.25em;
+    color: #000000;
+}
+
+.tool-desc-1 {
+    margin-top: 20px;
+    margin-left: 320px;
+}
+
+.tool-desc-1 p {
+    font-size: 32px;
+    line-height: 50px;
+    font-family: 'Gudea';
+    font-weight: 400;
+    color: #000000;
+    
+}
+
+.tool-background-2 {
+    background-color: #E7ECF4;
+    margin-top: 300px;
+    margin-left: 100px;
+    width: 377px;
+    height: 345px;
+}
+
+.tool-2 {
+    margin-top: -520px;
+    margin-left: 160px;
+}
+
+.tool-name-2 {
+    margin-top: -186px;
+    margin-left: 355px;
+}
+
+.tool-name-2 h1{
+    padding-top: 20px;
+    font-size: 50px;
+    font-family: 'Gudea';
+    font-style: bold;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 49px;
+    letter-spacing: 0.25em;
+    color: #000000;
+}
+
+.tool-desc-2 {
+    margin-top: 20px;
+    margin-left: 355px;
+}
+
+.tool-desc-2 p {
+    font-size: 32px;
+    line-height: 50px;
+    font-family: 'Gudea';
+    font-weight: 400;
+    color: #000000;
+    
+}
+
+

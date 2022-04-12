@@ -1,0 +1,25 @@
+extends layout
+head
+    block style
+        link(href='/css/login.css', rel='stylesheet')
+        
+block content
+    .container
+        form#login(action='/login', method='POST')
+            h1 Log In
+                .error 
+                    if message
+                        p #{message}
+                    #login 
+                        span What is your user name?
+                        input(type="name",id='name', name="name")
+                    #login 
+                        span Type in your password.
+                        input(type="password",id='password', name="password")
+                ul 
+                    li
+                        #login 
+                            input(type="submit", id='submit',name='submit' value="Login")
+                    li
+                        .add-btn 
+                            a(href="/register") SignUp

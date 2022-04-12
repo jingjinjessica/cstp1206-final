@@ -1,0 +1,26 @@
+extends layout 
+head
+    block style
+        link(href='/css/list.css', rel='stylesheet')
+
+block content
+    h1 list
+    .cover
+        .item
+            .background
+                span create new
+                img(src="/images/plus.jpg" width="80px" height="80px")
+            .add-btn
+                a(href ="/addPlant") create  
+    .cover
+        each image in images
+            .item
+                .background
+                    img(src="/images/letter.jpg" width="80px" height="80px")
+                .text 
+                    div #{image.name}
+                    div #{image.toone}
+                .add-btn
+                    a(href='/plantFinder/item?id=#{image.id}', target="_blank") view 
+
+   

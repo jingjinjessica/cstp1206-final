@@ -1,0 +1,23 @@
+extends layout 
+head
+    block style
+        link(href='/css/register.css', rel='stylesheet')
+block content
+    .container
+        form#registerForm( action='/register', method='POST')
+            h1  Register
+            div#error.error
+                if message
+                    p #{message}
+            #registerForm
+                span UserName
+                input(type="text",id='name', name="name")
+            #registerForm
+                span Password
+                input(type="password",id='password', name="password")
+            #registerForm
+                span Comfirm Password
+                input(type="password",id='cpassword', name="cpassword")
+                input(type="submit", id='submit',name='submit' value="SingUp")
+script. 
+    document.getElementById("registerForm").addEventListener('submit', validateRegisterForm);

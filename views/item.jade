@@ -1,0 +1,17 @@
+extends layout
+head
+  block style
+    link(rel='stylesheet',href='/css/myPlants.css')
+
+block content
+.title 
+    h1 #{title}
+.cover
+    .item
+        .background
+            img(src="#{image}")
+            input#imageData(name="imageData" type="hidden")
+        .text 
+            div #{name}
+            div #{toone}
+    

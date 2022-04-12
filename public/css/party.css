@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Gudea&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    padding-top: 225px;
+    padding-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+h1 {
+    margin-top: 50px;
+    margin-left: 50px;
+    font-family: 'Gudea';
+    font-style: bold;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 59px;
+    letter-spacing: 0.15em;
+    color: #000000;
+}  
+.images-box{
+    margin-top: 55px;
+    margin-bottom: -630px;
+    left: 100px;
+    display: flex;
+    position: relative;
+    border: 1px black;
+}
+.edit-box {
+    padding-top: 270px;
+    padding-left: 200px;
+    display:flex;
+    justify-content:center;
+}
+#editPlantForm input[type = "text"] {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    display: block;
+    background: #F2FBFC;
+    padding: 14px 10px;
+    width: 250px;
+    outline: none;
+    color: black;
+    border-radius: 12px;
+    transition: 0.25s;
+    font-family: 'Gudea';
+}
+#name {
+    width: 350px;
+    font-family: 'Gudea';
+}
+#desc {
+    margin: 20px auto;
+    height: 100px;
+    border: 0;
+    display: block;
+    background: #F2FBFC;
+    padding: 14px 10px;
+    width: 350px;
+    outline: none;
+    color: black;
+    border-radius: 12px;
+    transition: 0.25s;
+    font-family: 'Gudea';
+}
+
+/* Name & Description title*/
+#editPlantForm span {
+   color: #000000;
+   font-family: 'Gudea';
+   font-style: bold;
+   font-weight: 600;
+   font-size: 25px;
+   line-height: 30px;
+   letter-spacing: 0.15em;
+}
+#editPlantForm input[value="DONE"] {
+    margin-top: 20px;
+    border: 0;
+    display: block;
+    background: #749970;
+    padding: 10px 47px;
+    outline: none;
+    color: #E7F0F1;
+    border-radius: 40px;
+    transition: 0.25s;
+}
+#editPlantForm input[value="DELETE"] {
+    margin-top: 20px;
+    border: 0;
+    display: block;
+    background: #749970;
+    padding: 10px 40px;
+    outline: none;
+    color: #E7F0F1;
+    border-radius: 40px;
+    transition: 0.25s;
+}
