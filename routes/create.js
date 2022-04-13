@@ -12,10 +12,9 @@ router.get('/', (req, res) =>{
 router.post('/', async function(req,res){
     await prisma.Image.create({data:{
         name: req.body.name,
-        image: req.body.imageData,
-        toone: req.body.toone,
+        guests: req.body.guests,
+        image: req.body.image,
         user_id: req.session.user.id
-
     }});
 
     res.redirect("/list");

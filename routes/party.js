@@ -6,15 +6,15 @@ const router = express.Router();
 
 router.get('/', async (req, res) =>{
     const id = parseInt(req.query["id"]);
-    const plant = await prisma.Plant.findFirst({where:{id:id}});
-    res.render("party.jade", plant);
+    const image = await prisma.Image.findFirst({where:{id:id}});
+    res.render("party.jade", image);
 });
 
 
 router.post('/', async function(req,res){
     const id = parseInt(req.body.id);
     if (req.body.action === "post"){
-        await prisma.Plant.update({data:{
+        await prisma.Image.update({data:{
                 name: req.body.name,
                 toone: req.body.toone
             },
@@ -27,7 +27,7 @@ router.post('/', async function(req,res){
         return;
     }
     else if(req.body.action === "delete"){
-        await prisma.Plant.delete({where:{id:id}});
+        await prisma.Image.delete({where:{id:id}});
         res.redirect("/list");
         return;
     }

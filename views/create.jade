@@ -6,7 +6,7 @@ block content
     h1 create
     .addplantbox
         canvas#c(style="display:none")
-        form#addPlantForm(action="/addPlant", method="POST")
+        form#addPlantForm(action="/create", method="POST")
             lable(for="myImage")
                 span what is the name?
                 br
@@ -14,12 +14,10 @@ block content
                 br
                 span what photo?
                 img#mypic(src="/images/letter.jpg", width=300, height=300)
-                input(type="file"  id="myImage" accept="image/png, image/gif, image/jpeg")
                 br
                 span who is on the list ?
                 br
-                input#toone(name="toone" type="text")
-                input#imageData(name="imageData" type="hidden")
+                input#guests(name="guests" type="text")
                 input(type="submit" value="Save")
             script.
                 addUploadListener();

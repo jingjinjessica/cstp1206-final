@@ -6,25 +6,30 @@ generator client {
 }
 
 datasource db {
-  provider = "mysql"
-  url      = env("DATABASE_URL")
-  shadowDatabaseUrl =  env("SHADOW_DATABASE_URL")
+  provider          = "mysql"
+  url               = env("DATABASE_URL")
+  shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
 }
-
 
 model User {
-  id                Int      @id @default(autoincrement())
-  name              String
-  password          String
-  images            Image[]
+  id       Int    @id @default(autoincrement())
+  name     String
+  password String
+
+  PartyList PartyList[]
 }
 
+model PartyList {
+  id       Int    @id @default(autoincrement())
+  owner    User?  @relation(fields: [user_id], references: [id])
+  user_id  Int
+  name     String
+  guests   String
+  receiver String
+  image    String
+}
 
 model Image {
-  id                Int      @id @default(autoincrement())
-  name              String
-  owner             User?    @relation(fields: [user_id], references: [id])
-  user_id           Int
-  toone             String
-  image             String   @map("image_data")
+  id    Int    @id @default(autoincrement())
+  image String
 }

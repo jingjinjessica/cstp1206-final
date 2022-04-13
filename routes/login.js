@@ -20,7 +20,7 @@ router.post("/", async (req,res) =>{
     }
     else{
         req.session["user"] = user;
-        res.redirect("/myPlants");
+        res.redirect("/list");
     }
 });
 

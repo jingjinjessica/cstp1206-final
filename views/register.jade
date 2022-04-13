@@ -18,6 +18,13 @@ block content
             #registerForm
                 span Comfirm Password
                 input(type="password",id='cpassword', name="cpassword")
-                input(type="submit", id='submit',name='submit' value="SingUp")
+            ul 
+                li
+                    #signup
+                        input(type="submit", id='submit',name='submit' value="Sing Up")
+                li
+                    .add-btn 
+                        a(href="/login") Log IN
+              
 script. 
     document.getElementById("registerForm").addEventListener('submit', validateRegisterForm);
