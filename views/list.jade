@@ -11,16 +11,15 @@ block content
                 span create new
                 img(src="/images/plus.jpg" width="80px" height="80px")
             .add-btn
-                a(href ="/addPlant") create  
+                a(href ="/create") create
     .cover
-        each image in images
+        each party in partyList
             .item
                 .background
                     img(src="/images/letter.jpg" width="80px" height="80px")
                 .text 
-                    div #{image.name}
-                    div #{image.toone}
+                    div #{party.name}
                 .add-btn
-                    a(href='/plantFinder/item?id=#{image.id}', target="_blank") view 
+                    a(href='/party?id=#{party.id}', target="_blank") view
 
    

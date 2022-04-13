@@ -4,36 +4,30 @@ const express = require('express');
 const router = express.Router();
 
 
+function randomArrayShuffle(array) {
+    var index = array.length, tempValue, randomIndex;
+    while (0 !== index) {
+        randomIndex = Math.floor(Math.random() * index);
+        index -= 1;
+        tempValue = array[index];
+        array[index] = array[randomIndex];
+        array[randomIndex] = tempValue;
+    }
+}
+
 router.get('/', async (req, res) =>{
     const id = parseInt(req.query["id"]);
-    const image = await prisma.Image.findFirst({where:{id:id}});
-    res.render("party.jade", image);
+    const party = await prisma.PartyList.findFirst({where:{id:id}});
+    const guests = party.guests.split(",")
+    const receiver = party.receiver.split(",")
+    res.render("party.jade", {
+        partyName: party.name,
+        guests: guests,
+        receiver: receiver,
+        guestCount: guests.length,
+        partyId: party.id
+    });
 });
 
-
-router.post('/', async function(req,res){
-    const id = parseInt(req.body.id);
-    if (req.body.action === "post"){
-        await prisma.Image.update({data:{
-                name: req.body.name,
-                toone: req.body.toone
-            },
-            where:{
-                id: id
-            }
-        });
-
-        res.redirect("/list");
-        return;
-    }
-    else if(req.body.action === "delete"){
-        await prisma.Image.delete({where:{id:id}});
-        res.redirect("/list");
-        return;
-    }
-
-    res.redirect("/");
-
-});
 
 module.exports = router;

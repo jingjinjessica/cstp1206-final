@@ -5,8 +5,8 @@ const prisma = new PrismaClient();
 
 router.get('/', async (req, res) =>{
     const userId = req.session.user.id;
-    const images = await prisma.Image.findMany({where: {user_id: userId}});
-    res.render("list.jade", {images: images,user: req.session.user});
+    const partyList = await prisma.PartyList.findMany({where: {user_id: userId}});
+    res.render("list.jade", {partyList: partyList,user: req.session.user});
 });
 
 

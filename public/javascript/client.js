@@ -48,3 +48,20 @@ function deletePlant(){
     form.method = "DELETE";
     return true
 }
+
+
+function toggleReceiver(id){
+    document.getElementById("b_" + id).style.display='none';
+    document.getElementById("r_" + id).style.display = 'inline';
+}
+
+function showAllReceiver(size){
+    for(let i = 0; i < size; i++){
+        toggleReceiver(i);
+    }
+}
+
+
+function generateReceiver(id){
+    
+}

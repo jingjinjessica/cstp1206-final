@@ -3,19 +3,20 @@ head
     block style
         link(href='/css/party.css', rel='stylesheet')
 block content
-    h1 party
+    h1 #{partyName}'s Party
+    .add-btn
+        button(onclick="showAllReceiver(#{guestCount})") Show All
+    .add-btn
+        button(onclick="generateReceiver(#{partyId})") Regenerate
     .container
-        .images-box
-            img#mypic(src="#{image}", width=300, height=300, alt="#{name}")
-        .button 
-            input#show(type="submit" value="Show")
-        .edit-box
-            form#editPlantForm(action="/editPlant", method="POST")
-               
+        each guest, index in guests
+            .col1 #{guest}
+            .col2 ------->
+            .col3
+                button(id="b_#{index}" onclick="toggleReceiver(#{index})") Show
+                span(id="r_#{index}").hide #{receiver[index]}
 
-                input#done(type="submit" value="Regenerate")
-                input#delete(type="submit" value="Delete")
-    script.
-        document.getElementById("delete").addEventListener('click', deletePlant);
+
+
 
         
